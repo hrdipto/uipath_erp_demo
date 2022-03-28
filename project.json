@@ -1,5 +1,5 @@
 {
-  "name": "Time Entry",
+  "name": "Daraz",
   "description": "Blank Process",
   "main": "Main.xaml",
   "dependencies": {
@@ -46,7 +46,7 @@
   "entryPoints": [
     {
       "filePath": "Main.xaml",
-      "uniqueId": "0f844b2f-41ef-4b4b-838a-35084527c803",
+      "uniqueId": "b3e2e2db-be61-4ac0-905e-cc12b23274e4",
       "input": [],
       "output": []
     }

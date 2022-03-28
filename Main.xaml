@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="824,3212" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="886,1374" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="68">
+    <scg:List x:TypeArguments="x:String" Capacity="36">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -22,17 +22,17 @@
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
       <x:String>UiPath.UIAutomationNext.Enums</x:String>
       <x:String>UiPath.UIAutomationCore.Contracts</x:String>
-      <x:String>System.Collections.ObjectModel</x:String>
       <x:String>UiPath.UIAutomationNext.Activities</x:String>
-      <x:String>System.Activities.DynamicUpdate</x:String>
       <x:String>UiPath.Platform.ObjectLibrary</x:String>
       <x:String>UiPath.Shared.Activities</x:String>
       <x:String>System.Security</x:String>
       <x:String>System.ComponentModel</x:String>
-      <x:String>System.Reflection</x:String>
-      <x:String>System.Runtime.InteropServices</x:String>
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>System.Xml.Serialization</x:String>
       <x:String>UiPath.CSV</x:String>
@@ -40,7 +40,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="33">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="29">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -61,202 +61,86 @@
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
-      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
-      <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
-      <AssemblyReference>UiPath.Excel</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="747.2,3147.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+  <Sequence sap:VirtualizedContainerService.HintSize="670,1310" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="mobileName" />
+      <Variable x:TypeArguments="x:String" Name="variable1" />
       <Variable x:TypeArguments="ui:UiElement" Name="myBrowser" />
-      <Variable x:TypeArguments="x:Int32" Default="0" Name="counter" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Login | Website" sap:VirtualizedContainerService.HintSize="705.6,3054.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OutUiElement="[myBrowser]" ScopeGuid="90305b1a-b84b-4a68-988a-57dfef0d779f" Version="V1">
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="628,238" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Ex: Oneplus 9" Title="Which mobile price do you want to check?">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:String">[mobileName]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: oneplus 6 mobile - Buy oneplus 6 mobile at Best Price in Bangladesh | www.daraz." sap:VirtualizedContainerService.HintSize="628,940" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OutUiElement="[myBrowser]" ScopeGuid="4794a9c0-65c2-4cd7-8282-e5e5d5b13102" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="672,2837.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
-            <Sequence.Variables>
-              <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="ProjectList" />
-            </Sequence.Variables>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="594,724" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Email'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="630.4,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="90305b1a-b84b-4a68-988a-57dfef0d779f" Version="V1">
-              <uix:NTypeInto.Target>
-                <uix:TargetAnchorable BrowserURL="https://erp.bs-23.com/web/login" DesignTimeRectangle="818, 239, 300, 34" ElementType="InputBox" FriendlyName="'INPUT login'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='Email' /&gt;" Guid="adf2fa3c-1e7e-40c0-b90f-27fa93b30ac2" ImageBase64="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" InformativeScreenshot="b75fbd857ae3ae6f1464b1a782edaeb2.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login | Website' /&gt;" SearchSteps="FuzzySelector, Image">
-                  <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                      <uix:Target DesignTimeRectangle="818, 214, 37, 20" ElementType="Text" FriendlyName="'Email'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' aaname='Email' check:text='Email' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACkAAAAYCAYAAABnRtT+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEcSURBVFhH7ZJtDoIwDEB3Wo7BjkG8B1yDY+A/P+I3OmqLK24Dkqkjw4Qmz0Bb6ltBwB/EIhkqFslQsUiGCkOyhCxJIBlB5pXuCxtVLq357j1FdEk3PCUzvBqLCoqUeiQUeeYcgGv9GfzHHWmB3Xbtw036SLpIkG5+paeU78OYjEl5Sg6Bm1tTz1uSh5Qr3cPbYSljW1ZwXR9iQkm+Hxi6LkDSM64k55nfJD2/SV9JZ3OBNhlWkj+HTA/l/gleN9IO/V6yx5wk7bn0HM94vbEPJYejmQGWpFXEn7kgkJ6UGuERCeGKtQX14o6JOSCQTowSNYGJm8H1HhfRyRlCF+RcN3DSHG8qKoI2R3IsRskDsr8q2F0UbA025xgoeALMhAKvNWB83AAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
-                    </scg:List>
-                  </uix:TargetAnchorable.Anchors>
-                </uix:TargetAnchorable>
-              </uix:NTypeInto.Target>
-            </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="630.4,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" IsPassword="True" ScopeIdentifier="90305b1a-b84b-4a68-988a-57dfef0d779f" Version="V1">
-              <uix:NTypeInto.Target>
-                <uix:TargetAnchorable BrowserURL="https://erp.bs-23.com/web/login" DesignTimeRectangle="818, 313, 300, 34" ElementType="InputBoxPassword" FriendlyName="'INPUT password'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' aaname='Password' /&gt;" Guid="0d0def43-6109-4b83-8a51-fefc78373d83" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAATAAAAAmCAYAAABDA8fBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHOSURBVHhe7d0xbhNRFIbR2R9NxGrSZw9UKVkCXWo6kyINYFtKlCh2RBICxQgEhIvvBA+2ZDoL3pXOL53C43mFm08zlbswMys6ATOzstsKWN/3MZ3N483paUwmE4AmZJOyTdmozY0Byy/yprezq3h3fhvvL+4BmpBNyjZlozYjNgYs65Y3zK8+x9Xt11h8/AHQhGxStikbla1abwxYlm12+RDX99/j5tPjyk+ARjwObcpGZavWGwOW75mXH77E8kG8gPZkm7JR2ar1tgKWj2q7DgK0IBslYEBJAgaUJWBAWQIGlCVgQFkCBpQlYEBZAgaUJWBAWQIGlLXngC3ixUEXXdfFs+PF72uv43D1Oa8dnjzdd3b8fPjcHbyMs2bOAdXsN2AnR0+hGBzFq9W1MR5jQP4EJg2RaeDczt8DNM0TmCcwKGvPAQP4dwQMKEvAgLIEDChLwICyBAwoS8CAsgQMKEvAgLIEDChLwICy/hqw/Lvu67tvOw8BtCAbla1abwzYdDaP6fly+PvuXQcB/qdsUzYqW7XeGLC+74eyzS5uYulVEmhINinblI3KVq03BiyXX2Td8qZ8zwRoQTYp27QZr9xWwMzMKk3AzKzoIn4Bcv+QcDw8ApQAAAAASUVORK5CYII=" InformativeScreenshot="8762af3b2c8bfe70726d3c43fb315c80.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login | Website' /&gt;" SearchSteps="FuzzySelector, Image">
-                  <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                      <uix:Target DesignTimeRectangle="818, 288, 66, 20" ElementType="Text" FriendlyName="'Password'" FullSelectorArgument="&lt;webctrl aaname='Password' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Password' tag='LABEL' type='' check:text='Password' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEYAAAAYCAYAAABHqosDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGYSURBVFhH7ZTtbQMhDIY77Y0RxkC3R26NG+MyBoXAaxuDS9RGqhT5lfwjwZ+POb6SayoHY8jBGHIwhhyMIQdjyMEYEmDOFLctbRML96v5fKKudNzKnDETYL0EptjnwnkZTO+Qzljh7Ph3BBhlAPxhtyOXFjLPx/rnXn14Kc0HMY8jBeQpRj1WIT7uqFlzX/dAMeF+vgMM6GprMbpRGBpenNdBQjoe5ZeoBRCtlycoK5dYBMCQlTp6MWRLMHPrbgUJzbdh0KzaHGl1bg5em5bgxtvEINErgaF67ENxVOcXYGZQ+m1MttyMGy9anEtwDRI+g3gitgzw8+1GTvTI/c/iZF7W+lPqhCQaBH5DCrJ+Z8xzbjI+h8q9NFghA+LbNh/m/8BgozQIYjQYyAIHjefyYax14FNNfyZ849hP+zAY9qE4enPeAWawNhgVUQaQq/MiUUNvvuvN6kXkGsFkWT38CUxWt1HxFowbgKl8q3PqQwyEGAmwSMNRj/oUTFY/w9FukQnGJeVgDDkYQw7GkIMx5GAMOZipUvoGX8EZxGgB4bgAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
-                    </scg:List>
-                  </uix:TargetAnchorable.Anchors>
-                </uix:TargetAnchorable>
-              </uix:NTypeInto.Target>
-              <uix:NTypeInto.Text>
-                <InArgument x:TypeArguments="x:String">
-                  <Literal x:TypeArguments="x:String" Value="" />
-                </InArgument>
-              </uix:NTypeInto.Text>
-            </uix:NTypeInto>
-            <uix:NClick ClickType="Single" DisplayName="Click 'Log in'" sap:VirtualizedContainerService.HintSize="630.4,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="90305b1a-b84b-4a68-988a-57dfef0d779f" Version="V1">
-              <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="https://erp.bs-23.com/web/login" DesignTimeRectangle="818, 362, 64, 34" ElementType="Button" FriendlyName="'Log in'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' aaname='Log in' check:text='Log in' /&gt;" Guid="7081540c-09c7-4791-8856-fd8afe297c28" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEQAAAAmCAYAAAB9Lz3jAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGiSURBVGhD7ZqxbsIwFEX7RZUKf9S9UheG9ieQ+g1V17LQLv0CxFoxhaFsKCxhQGJ59bVjx34YFdqQGvOudCXCsxPfkxczhCsSBRIgTAGQz68V3T59UO/+ha7vnrM2MiIrMvtyQFDAoJvBK/Uf3qj/+J63VUZkRWYfigMCWhpGbHLGRmZkt3JAQOoiOoNbZUZ2KwcEz1V0wgUY2a0EiLIAYRYgzAKEWYAwCxBmAcLcIpAZTTZE82ms1r5HS7XQ5SJa+4vPFsip3DGQBc3ra0BVMQvq+q7XqopSj913Pr9D8NmOt/rtjekQiIHRQAiPh8VWHa1pVI+3cA4FQrSlydjU+LmOcWdA9CI3JQ3976drdTUsPDJ3XFKlqgcD8fcTPbcBdIw7A7KzaFgvHEDQLTyA6SAB4uqZA5FHZsfhJtr6ppoqkJiaUAaC1c8/u/tDnQGQth3bV07vRICY7vI7JrrndOB0OqTeRJ3+AQacDpBELECYBQizAGEWIMxRIPIq08gBkZfdRg6I/B3CyAGBUAAtDMJzlbOREVl9GFAARCRAmIi+AUmgdCuRAPSCAAAAAElFTkSuQmCC" InformativeScreenshot="90e1d95841ee1a44a33dc48158e144af.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login | Website' /&gt;" SearchSteps="FuzzySelector, Image" />
-              </uix:NClick.Target>
-            </uix:NClick>
-            <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="630.4,22.4" sap2010:WorkflowViewState.IdRef="Delay_2" />
-            <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'A  /web#menu_id=465&amp;act...'" sap:VirtualizedContainerService.HintSize="630.4,107.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
-              <ui:WaitUiElementAppear.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ed00019d-1d51-4d84-93a5-c744f05967b2" InformativeScreenshot="3a2c8d602579d4812463f206a31c9263" Selector="&lt;webctrl href='/web#menu_id=465&amp;amp;action=' parentid='sidebar' tag='A' /&gt;">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
-                </ui:Target>
-              </ui:WaitUiElementAppear.Target>
-            </ui:WaitUiElementAppear>
-            <uix:NClick ClickType="Single" DisplayName="Click 'Project'" sap:VirtualizedContainerService.HintSize="630,156" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="90305b1a-b84b-4a68-988a-57dfef0d779f" Version="V1">
-              <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="https://erp.bs-23.com/web#menu_id=81&amp;action=96&amp;active_id=channel_inbox" DesignTimeRectangle="54, 591, 41, 15" ElementType="Text" FriendlyName="'Project'" FullSelectorArgument="&lt;webctrl aaname='                                     Project                    *' parentid='sidebar' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='                                     Project                    *' parentid='sidebar' tag='SPAN' type='' check:text='Project' /&gt;" Guid="392b7cb3-db35-4b89-8084-4cc9427a8609" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC0AAAATCAYAAAAEaoRHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIeSURBVEhL1VQ9SytBFN1/suAPCPgD3mKzYPcKFyy0CkGQYPEIFpLqEQRZUsi+IpBXxS4WspZ5ENgUwgoP1sIiYDGFxUCK+QvHO+7XZBw/YhZZFw7MnHvnzpm7Z8aiD98QRrLuMJJ1h5GsO4xkBXDROevANcbWRjkJbgWEWAa7n8DfsdUFH8PuCPPFHOMDQ2wFSE3suq3zywniNiiDm/sIZhyChWgreV+J1UVLHIZgIkaQxdn/CAkv89zfIZLH7M9whqjvwX5eGyAWDOFhVmejheENK//g1C+sYx+NkbCsxiKvIddnnMRy44qBsdP+lDZ6nKCTx3mC0S8P3nYD1t4Yc8ERD/bRsGx4pxM6YC5UFW2jJ//YQ4jOJonc8RHRQZO/DqwtyuMcyUXruYZzIptEttorNb3fafV0BP4QY9hMPa0XaF3Rge5GcLK5FOfPaM2/Lo1V0XLMMTnJ8yy0r2mtbNB5rHXRQbs/RHcl0bo9FOgFio2VnJLTRb9siOz88HL+5p2pXPRrnRazHo110TQ+yvMUvOg0WeSnB5dsJOeVi9Y9nfqRbHAs46poB8ENB78fo/uDrLbhoHsZIxp4hafTGhYax1SDLmO6Lt2TT3vZ5S5QTlYWTfjs68HvQvS209jS6yFrnLlFfec8Al8QT1ZqZRyhGFQMTXS1MJJrw26GZB16HrfM8TVhJNfDH7pc0gKzQLmklcJI1h1Gssaw8AQJmvyhVNQZ7gAAAABJRU5ErkJggg==" InformativeScreenshot="92dae6fe122682d5cfa63af991fe4d8c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='#Inbox - Odoo' /&gt;" SearchSteps="FuzzySelector, Image" />
-              </uix:NClick.Target>
-            </uix:NClick>
-            <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="630,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
-            <ui:FindChildren Children="[ProjectList]" DisplayName="Find Children 'DIV'" Filter="&lt;webctrl /&gt;" sap:VirtualizedContainerService.HintSize="630,106" sap2010:WorkflowViewState.IdRef="FindChildren_1" Scope="FIND_CHILDREN">
-              <ui:FindChildren.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ec879764-278e-4be1-85c2-6394b29d9563" InformativeScreenshot="458402bed3e0b9ea9f1188c1e98beba5" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='6' tag='DIV' /&gt;">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
-                </ui:Target>
-              </ui:FindChildren.Target>
-            </ui:FindChildren>
-            <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="630,1415" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[ProjectList]">
-              <ui:ForEach.Body>
-                <ActivityAction x:TypeArguments="ui:UiElement">
-                  <ActivityAction.Argument>
-                    <DelegateInArgument x:TypeArguments="ui:UiElement" Name="element" />
-                  </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="594,1290" sap2010:WorkflowViewState.IdRef="Sequence_1">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <Assign sap:VirtualizedContainerService.HintSize="552,61" sap2010:WorkflowViewState.IdRef="Assign_1">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:Int32">[counter]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:Int32">[counter + 1]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="552,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[counter.ToString]" />
-                    <uix:NHighlight Color="Gold" DisplayName="Highlight" sap:VirtualizedContainerService.HintSize="552,136" sap2010:WorkflowViewState.IdRef="NHighlight_1" InUiElement="[element]" Version="V1" />
-                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Chrome_RenderWidgetHost...'" sap:VirtualizedContainerService.HintSize="552,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
-                      <ui:Click.CursorPosition>
-                        <ui:CursorPosition Position="Center">
-                          <ui:CursorPosition.OffsetX>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:CursorPosition.OffsetX>
-                          <ui:CursorPosition.OffsetY>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:CursorPosition.OffsetY>
-                        </ui:CursorPosition>
-                      </ui:Click.CursorPosition>
-                      <ui:Click.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="55d0da8e-a9e9-493e-bafb-d6fc0ea89382" InformativeScreenshot="c9bbd8301551d771b0f51de910b934fc" Selector="[String.Format(&quot;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='{0}' tag='DIV' /&gt;&quot;, counter)]">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
-                          <ui:Target.WaitForReady>
-                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                          </ui:Target.WaitForReady>
-                        </ui:Target>
-                      </ui:Click.Target>
-                    </ui:Click>
-                    <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="552,610" sap2010:WorkflowViewState.IdRef="Sequence_8">
-                      <Sequence.Variables>
-                        <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
-                      </Sequence.Variables>
+            <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="552,630" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:BrowserScope SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[myBrowser]" BrowserType="Chrome" DisplayName="Attach Browser 'Oneplus6m Page'" sap:VirtualizedContainerService.HintSize="510,536" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="77f16291271b3510abe8ecc6d8a98a2d" Selector="&lt;html app='chrome.exe' htmlwindowname='nameStorage:?wm_referrer=https%3A%2F%2Fwww.daraz.com.bd%2F&amp;amp;refer_pv_id=735212f7IQYDtM' title='oneplus 6 mobile - Buy oneplus 6 mobile at Best Price in Bangladesh | www.daraz.com.bd' /&gt;">
+                <ui:BrowserScope.Body>
+                  <ActivityAction x:TypeArguments="x:Object">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,390" sap2010:WorkflowViewState.IdRef="Sequence_3">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'Tasks Odoo Page'" sap:VirtualizedContainerService.HintSize="510,516" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="93a86a64c99f1f865cf69499c9d8901b" Selector="&lt;html app='chrome.exe' title='Tasks - Odoo' /&gt;">
-                        <ui:BrowserScope.Body>
-                          <ActivityAction x:TypeArguments="x:Object">
-                            <ActivityAction.Argument>
-                              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
-                            </ActivityAction.Argument>
-                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,370" sap2010:WorkflowViewState.IdRef="Sequence_7">
-                              <Sequence.Variables>
-                                <Variable x:TypeArguments="x:String" Name="outputDataTable" />
-                              </Sequence.Variables>
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract Structured Data 'DIV'" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column1' attr='text'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='strong' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="ExtractData_2" MaxNumberOfResults="100" SimulateClick="True">
-                                <ui:ExtractData.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a36a5d64-1cea-4a3d-9957-c3d8bf341b9a" InformativeScreenshot="dbf2fa44f59e67b9879d3349fe9b05d5" Selector="&lt;webctrl css-selector='body&amp;gt;div' tag='DIV' /&gt;" WaitForReady="COMPLETE">
-                                    <ui:Target.TimeoutMS>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:Target.TimeoutMS>
-                                  </ui:Target>
-                                </ui:ExtractData.Target>
-                              </ui:ExtractData>
-                              <ui:AppendCsvFile Encoding="{x:Null}" DataTable="[ExtractDataTable]" Delimitator="Comma" DisplayName="Append to CSV" FilePath="taskList.csv" sap:VirtualizedContainerService.HintSize="434,132" sap2010:WorkflowViewState.IdRef="AppendCsvFile_1" />
-                            </Sequence>
-                          </ActivityAction>
-                        </ui:BrowserScope.Body>
-                      </ui:BrowserScope>
+                      <ui:ExtractData DelayBetweenPagesMS="{x:Null}" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract Structured Data 'DIV'" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;/row&gt;&lt;column exact='1' name='Product Name' attr='text'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Price' attr='text'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Review' attr='text'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='5' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Shipping Location' attr='text'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='5' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="ExtractData_1" MaxNumberOfResults="1000" NextLinkSelector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;a' idx='9' isleaf='1' parentid='root' tag='A' /&gt;" SimulateClick="True">
+                        <ui:ExtractData.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f71395a6-dcd3-4061-ae76-ae8aec72b01d" InformativeScreenshot="0a79ee6160d0b4363e3d3410439ccad7" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='root' tag='DIV' /&gt;" WaitForReady="COMPLETE">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                          </ui:Target>
+                        </ui:ExtractData.Target>
+                      </ui:ExtractData>
+                      <ui:WriteCsvFile Encoding="{x:Null}" AddHeaders="True" DataTable="[ExtractDataTable]" Delimitator="Comma" DisplayName="Write CSV" FilePath="Daraz Sheet" sap:VirtualizedContainerService.HintSize="434,152" sap2010:WorkflowViewState.IdRef="WriteCsvFile_1" />
                     </Sequence>
-                    <ui:GoBack Browser="[myBrowser]" DisplayName="Go Back" sap:VirtualizedContainerService.HintSize="552,22" sap2010:WorkflowViewState.IdRef="GoBack_2" />
-                  </Sequence>
-                </ActivityAction>
-              </ui:ForEach.Body>
-            </ui:ForEach>
+                  </ActivityAction>
+                </ui:BrowserScope.Body>
+              </ui:BrowserScope>
+            </Sequence>
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="-8, -8, 1936, 1048" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGnSURBVDhPdZO7SgNBFIZHsZB4fxQhjaCC6K5BRexMLdY+gXZesusNO0EEkyASg4ggCHbiS9goFmKhIt4QK/X7d2fIiMnAx8ye858zZ2bOGjd2RxZNKYxMKYhamfthAfahCgUIoQ1MMSjYKDuKYcHsDCUJeqEMj/ANPx4voGTZ7eH5JCYNJtvRxJaCJ+Ea/KB63MDEfi5OK+FD9MEtONE7nEMMG3ABn+D82igLSYJ2OAbnVKLpYhhlmE05t0q5UQfrGbgHp6tQQUYJcqDzyfgB+XJIee6MDJV6MLYh7Sx8We0zjMioG3ZZz9mtDWxobcgGXWguPf2yEhx6hli77wUrNqw2VEV5NJZ+09NXZNDTOEPUKIFs8knj6asyrHuGM8rM1D9CQehizzx9knEK9GwyvNlvOvLvJSa21CeNtK8wpovpYaE3d1mvIGS3FuYk0K7VyvI53Ql0uMxyPoBzPoFaes6itWzOfwcDkHYiJTYzq1H8JI1QM+V3h5fSVnZntEkC0HHcnfjo7KcwiLbp30XvBeoJdWDUjUg/1hroicUqjEMn1HY2xvwCiNq5lKtvEQcAAAAASUVORK5CYII=" InformativeScreenshot="626dd940d4f6c2585523709b4e6b2f97.png" Selector="&lt;html app='chrome.exe' title='Login | Website'/&gt;" Url="https://erp.bs-23.com/web/login" />
+        <uix:TargetApp Area="-8, -8, 1936, 1048" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAA1HSURBVHhe7VoJVFNnFrZnTjtzzizndDqdOta2KpCoCCQvAa0ERLIRQFAxGwQVqxbU1nbqgthWpbUz3WxlcWHHorXOaTutFakbi3W3i51pizoVhUB2yPaykeSf+ycPF4zWqQQd6nfOd95Lcu/j/7577/9eThh2D/fw/4OExrbfzDqhjROfUCfOOqZKEB9VTfG9Pt7FkZ3UTJ55TBMrPqqOoMKHHtJPGh4TH9eYZF+bkeS0AUlO6ZHkhA5JTgJPaJH0lN4z67jmEyp86GHmccNI8TGNVnJSj8QgGAuX4uMJrSn1qFYV16LrJA6o9lLhQw9+A9R6ma/yGud0OOe1qNujD6p1UQdUtqjmHhS5r/MYFT70gA3IOKr5UfSFRju5SaVlHFCbI/erUOQBNYoCMpq6UdS+riNU+NDDxEblSOKg6mLkfo2nT3QUGNDHIW8AfV/7iMh9XR2MQzov46AGRP/CDKDVnn2UvvNs2/iP2zQR9R09INrp6wKfGb8AA0Lrzo+k1f2go+04h8K2t5Jjd53Xhe9u10XuUxnBAC+zxYhgTzhKhQ89+AzY3qqlvX8O0XacRbTtZ1FYXaubvuOcedxHbeqIvZ2WqH2qg1T40MM1BmxvvULKDPoHPzroO88doMKHHm5oAEX6P9oQve6HX8gIBDJg1wUwoHWIb4L3DLhnwD0DAhkQsvM/6IkPOzy0utYWKnzoob8BYXB8YuePaMyO864pFccM69dt6Tmel9uAhg27j0oZWqAM0I3e1YaFuxnbzhgXv/mBvmHpMo02K92OZEJkkyTdnbdBtHDh/UaxYHSPJGWqSZacaZalLjDJpj1rlKUsNElTs4zyZL5ROj0EiUS/plKuw6MfKkeOq/u+XVzS0F2Vv17dNkdmdUiEvQ5pErLIkpEjaxoyyVLunj1AnS34rUk6TWSVp75tkqd8bZGlGMyylF5H5jTkVqQhjyIdjul9C/dY5KndZnnKdxBXbJZPm27MTHmQupQP769YO+LMgpyLpDzV4ZIIkFUqQnA9nOvjXWOAVZ72iFWauhwE/RvEoF4QawPRYAQCgZcXfDWxEPw5jvNkT0cWOBrFwm80U4gV7azQEHxdpBD+xSpJUpHwGVz7umvccQOQWPwAKUvNtcpSLzhhMVjM1RW6GbEgszzVC+fO7vREvSaBre2KHmfTsOioi6Bpuli0VZeix4d3TQr/Ti+Y3G3KEPTAGPVioyDPd407aoBePm2sRZ7SYIcFkZnXVycQ8cJ9AkCIEQTphJN1qknhug4mzaFkhqFOgoaUQBWYoAUqCfq5DiLMrmSEejpZY0lNPENtSJ2iN0uSbebMaR5Xdhq+7uAbAH80hZRPa8dVv5WKW8AgvGCjRGTrBgFqDkOtBEFKZqgbi+4T3p9qMKHvM18cmARGObtixndreTFaawbfaJamNFPLGhyYZqRmQduTuPKBxPYRV9vs7wxXzwyeQcubBC0+vgcLwEJuJPpW6MtlhHphXFxdT0Z8Ri0t+HCWxs0iV/DU5NwU0iyBeZRe2/q4G3CLw3z3GsVJFkMyR6eeHKmBRTtxi6tg4TDf/mpiEbdJvX9MBuc5wFYTF+vZFmdwv8fxOMvjzLZXEzWWRUK9KTPFaZJAtWVghjTZ2ZOWqNNMYWm72GOtGiIMZtm3WCfQomTR9XA0dxA0B55zA5sO8369sFulzm9A8PcAS1Xcw67quG9RXTxyVnOQq5aDet/jIGctp9e5Kb6TXMZVGtI5HdDiXUpGmFsPojqZNANU+YN2ZlhuF5PO1kaHD78UEfFgW/io4ReYtKhOZug8JYtWDTEqvOFhQwKJvBkHzQBHdWwR2uEX31sbBwbEuZ1VHNK5eZLeviFaa3uNsFlXR9mMCyJ6NIKxnbC5vX0pmjaGSr8p2pn0EZ0s2sswGlq/oMBiA3FQDACxMe5aDuneBsJrOE5XeazO/s5EnW09q8dWyHTZ1zGRDeh9jYVs65lnXH9jRFOp/xMuMUPHg5hD/ttfYMH9OSgGOGs4te4ajt1eOklje4OtB9EOEOzFokmKnvUgvpDRqFvLHEGl/Sy00um/72TSt+tgbwgk+Gp2MWmoOxKOkfQmKn3gYX47hmZ/K/qCfT1hA8G9uNp9ovvY+yqBO+AMWhs9nEq7LWjDw3+nZNLqA5kA+wpSRwEjaK42Dt10fGlUzyeV7ODdBm3riOUIt3YA4Zj2QgLZX2FaofqxVMqAQAP7B+wLHX0PQioGiA4P83SwabZvZRM09UVsXU3jk9bK76a4N3/FCc6vw2iX+FdgwGE3VDiQeEzc+uQ6ooRKGVB0smlL9FDtriia85xgrL7xZaZux6dPdped5ri2fBOHyk7Hoapv4lHZSU5w9gDHWiLUuo5hcBQGFo+rbyskzM5XiHFUyoDC+PjjD57Iizz96baJhoojsY4tX3O8ZV+B8FMcLNrHoBpgfYVIwvMdSDymr/prmXvhG+GvqJQBR8mZ+HegzXsrvuSg8quED44BhYzn/C0e2AD3egJZ1jFfosKDgvwWXsaaw1N73joar9l8gkNWnOS4K05fMSOoBkB7v+l9jR1QPKYDj8A6YgYVHhSsbOZFrGjielc2c3sLWrg9rx5O0BWdiNeCaEcFmFB9JpgGLB/7pqMgwoVvf2AGIvvtBfA8gPeBOCo8KHjhYOITK5u4RugElN/MQ8uxGU1c50stiYbXj0BXnIy3gwHBeQ4w5Y5a48gb47UuCbWRy8ZbyZeinCDc4zMDDLCDAZa17AQqPChY7TfAlN/CRXC8QjBjRRPPXXCYa197eGpw/kvMvGj0MtfiEGTJHYPMT4/2WnJDnJalNJstf4LVtobR63yFhSyFhIQKDwoKGgUTQKznGvFXseAYHxsRnK/D1twxWb1ggBkbAPQbgY+jPdbFITbbC+Nc5KrwF6nwoCC/kStddZgXUDxmwVE+PgZpD8gNiSXzxnh8wvsRv9e7eDSyL3qsGYmHPUClDDhWNvHKVvtFBmRwDXgmdKQ5N6STXHRtF9jyRiFH3mPIkEu3NStEHfmiQiaVMqBYe0TwZ2jv9jvWAQgNuw8EH3DCGJB5o5Fz0ePImjfG0TpvorFGvED9jOit7kxejTeTW76TShlQwO1v1c2qjxlUAzCseaOe8ywZ5VXOn0DWy2eqX05dY1Dwy0kJt8Yj51WhLF4FUvArnZm88nQqZUCw8pAwHO79uvybVD+/mYtehE0wv4kbvF+H/7WQFbI5Y8mlhcJSo5Rb5ZFyq32is3jll5nNx0ZUXlQkVdKptNvCqgPch0D8kYIj11cfi/aT51lxiEc+d4ivf7qe/zmVGhxkcLdVzha+d43o/pwtqEYKXuW38oStY6m0n4WCA9xH8pt4e6nWvk44GGN7/iDPsKiBr31qj7B73t4kz+zdguCNAIZCWBml4FeZoNUDiu9jts+E8ks/dxyer82MWXlkypcvngSxLYl+0fAABEfnskauecnnPNX8PYLuOZ8KnHN2C7w5nwnRUw1JaG6wDcDI4pa9PltYG1D41cTjAJ3ggvMdsxMrYsTiXT/5TTFbUDFBwavYNCe9VLXgrwX2pVUKcuX+JMeKLxJsSw/xtE838PU5uwWWubuFnrkgGgRf5qAZIBZW/BFEfTlbUBNQ+LWsgJGAOH65E143ZnEr1mUJykRy7qZIxdRKOhacxa/ggqmrsrjle6FryDlgbja/GmUmVJvFnHLlzNS/n5OsWNyqqEs3zq3nued9zkc5e64IH3QDMDKholBdnX/TCyS8P7ER1f794cr42OF9L36NTcLCofou+dSy7pmxmy+KYko0fKLIxo8qQfzIEiSc+K4pLWu1Tr5BoZvzscia08BFOfV8NPezO2AAhkKwdTosnrx1E64lFq7g41snvOZWmMRTtihTJ5V2ConibgGzyCMgipGfRRSLwYhSBIa4khNf75nx7FJ1VmWGce4egTOngYfm7/eNxOAZgJHJLZNB1cy4soFEBqJftI+kdGqZLn3y5ksidpFOwNzohIr3E30DMqArIjZ54dySOnONQVI4X5PzURqZs5d3mFra4CGbVyaEVr54s40RTOoT7YanxZ6MuC3tKTGlKiGryMxnFoGQnxYtZJUEeB+6wjcipe7k+A3mtNn59dSyBhfSxK0hsCd8gschW3BlJC5XG7pEklCmTp+0qT2JBdUmitx9Aq4VdD2x8CTWJjjfeAnvCYFiMJOILWBG6eCOwNVYyNp6f7ag/CkQe9Z/h6jwyrhlBryhJbOLtSCWhNmGxd5CiwOFrFIkYm9BQqKkG3LWJBHvRgpYG9WBOwEM8JlUdOcM6AM8Af5JNrX82bRJm47DhmYVwsLw4m608Css9olOYm/2xxNFbUlE6QZhdEk4vi4/tngExJlE0Vt8n/dncnQZvs4p3yLuBiSEvzFcyCrOhEXVgbjvoYWtvsVigQEIcQ4w7DzEfiRglczB+dSlfBAxix4WsIr+KWAXN8MoNPUnGHwYjkH5Yea2IZpY9AdfC7PfEQmIkoUgdjluazBlNZ/YuDiJWZwG5yxuTMlDVMo9BB/Dhv0XhxlUh+CILXQAAAAASUVORK5CYII=" InformativeScreenshot="bf135b706d651fab6972ff321d824252.png" Selector="&lt;html app='chrome.exe' htmlwindowname='nameStorage:?wm_referrer=https%3A%2F%2Fwww.daraz.com.bd%2F&amp;amp;refer_pv_id=735212f7VI0Hva' title='oneplus 6 mobile - Buy oneplus 6 mobile at Best Price in Bangladesh | www.daraz.com.bd'/&gt;" Url="[&quot;https://www.daraz.com.bd/catalog/?from=input&amp;q=&quot;+mobileName +&quot;&amp;price=1000-10000&quot;]" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
   </Sequence>
